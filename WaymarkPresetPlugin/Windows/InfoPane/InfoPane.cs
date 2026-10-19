@@ -36,6 +36,8 @@ public class InfoPaneWindow : Window, IDisposable
 
     public override void PreDraw()
     {
+        base.PreDraw();
+
         Position = Plugin.LibraryWindow.WindowPosition with { X = Plugin.LibraryWindow.WindowPosition.X + Plugin.LibraryWindow.WindowSize.X };
     }
 

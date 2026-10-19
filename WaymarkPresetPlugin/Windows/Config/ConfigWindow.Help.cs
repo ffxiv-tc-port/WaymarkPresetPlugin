@@ -43,6 +43,7 @@ public partial class ConfigWindow
     private float CircleComputerAngleOffsetDeg;
     private IDalamudTextureWrap CoordinateSystemsDiagram;
     private HelpWindowPage CurrentHelpPage = HelpWindowPage.General;
+    private static readonly HelpWindowPage[] HelpWindowPages = Enum.GetValues<HelpWindowPage>();
 
     private void InitHelp()
     {
@@ -57,14 +58,15 @@ public partial class ConfigWindow
 
         var style = ImGui.GetStyle();
         var cachedCurrentHelpPage = CurrentHelpPage;
-        for (var i = 0; i < Enum.GetValues<HelpWindowPage>().Length; ++i)
+        for (var i = 0; i < HelpWindowPages.Length; ++i)
         {
             if (i > 0)
                 ImGui.SameLine();
 
             using var color = ImRaii.PushColor(ImGuiCol.Button, style.Colors[(int)ImGuiCol.ButtonHovered], i == (int)cachedCurrentHelpPage);
-            if (ImGui.Button(((HelpWindowPage)i).GetTranslatedName() + $"###HelpButton_{(HelpWindowPage)i}"))
-                CurrentHelpPage = (HelpWindowPage)i;
+            var page = (HelpWindowPage)i;
+            if (ImGui.Button($"{page.GetTranslatedName()}###HelpButton_{page}"))
+                CurrentHelpPage = page;
         }
 
         using var child = ImRaii.Child("###HelpTextPane");

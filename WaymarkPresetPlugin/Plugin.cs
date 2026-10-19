@@ -28,10 +28,16 @@ public class Plugin : IDalamudPlugin
     [PluginService] public static ITextureProvider Texture { get; private set; } = null!;
     [PluginService] public static ICommandManager Commands { get; private set; } = null!;
     [PluginService] public static IClientState ClientState { get; private set; } = null!;
+
+    [PluginService] public static IObjectTable Objects { get; private set; } = null!;
     [PluginService] public static IChatGui ChatGui { get; private set; } = null!;
     [PluginService] public static IGameGui GameGui { get; private set; } = null!;
     [PluginService] public static IPluginLog Log { get; private set; } = null!;
     [PluginService] public static ICondition Condition { get; private set; } = null!;
+
+    // IPC 端點的實作跑在「呼叫端的執行緒」上，不是 framework 執行緒 ——
+    // 所以每個對外端點都要把整段工作交回主執行緒（見 IpcFrameworkGate）。
+    [PluginService] public static IFramework Framework { get; private set; } = null!;
 
     internal const string InternalName = "WaymarkPresetPlugin";
 
@@ -134,6 +140,7 @@ public class Plugin : IDalamudPlugin
 
     private void LanguageChanged(string langCode)
     {
+        if (langCode == "tw") langCode = "zh-Hant"; // Dalamud TC 內部語言代碼 "tw" 撞 ISO 639-1 的 Twi 語，.NET CultureInfo/ResourceManager 不認；台服繁中對應 zh-Hant
         Language.Culture = new CultureInfo(langCode);
     }
 

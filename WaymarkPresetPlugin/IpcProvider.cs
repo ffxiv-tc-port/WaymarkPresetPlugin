@@ -71,85 +71,106 @@ internal static class IpcProvider
 
     private static SortedDictionary<int, string> GetPresetsForCurrentArea()
     {
-        var presets = new SortedDictionary<int, string>();
-        if (Plugin == null)
+        return IpcFrameworkGate.Get(Plugin.InternalName + ".GetPresetsForCurrentArea", () =>
+        {
+            var presets = new SortedDictionary<int, string>();
+            if (Plugin == null)
+                return presets;
+
+            foreach (var index in Plugin.InternalCommand_GetPresetsForCurrentArea())
+                presets.Add(index, Plugin.GetLibraryPresetName(index));
+
             return presets;
-
-        foreach (var index in Plugin.InternalCommand_GetPresetsForCurrentArea())
-            presets.Add(index, Plugin.GetLibraryPresetName(index));
-
-        return presets;
+        }, new SortedDictionary<int, string>());
     }
 
     private static SortedDictionary<int, string> GetPresetsForTerritoryType(uint territoryType)
     {
-        var presets = new SortedDictionary<int, string>();
-        if (Plugin == null)
+        return IpcFrameworkGate.Get(Plugin.InternalName + ".GetPresetsForTerritoryType", () =>
+        {
+            var presets = new SortedDictionary<int, string>();
+            if (Plugin == null)
+                return presets;
+
+            foreach (var index in Plugin.InternalCommand_GetPresetsForTerritoryType(territoryType))
+                presets.Add(index, Plugin.GetLibraryPresetName(index));
+
             return presets;
-
-        foreach (var index in Plugin.InternalCommand_GetPresetsForTerritoryType(territoryType))
-            presets.Add(index, Plugin.GetLibraryPresetName(index));
-
-        return presets;
+        }, new SortedDictionary<int, string>());
     }
 
     private static SortedDictionary<int, string> GetPresetsForContentFinderCondition(ushort contentFinderCondition)
     {
-        var presets = new SortedDictionary<int, string>();
-        if (Plugin == null)
+        return IpcFrameworkGate.Get(Plugin.InternalName + ".GetPresetsForContentFinderCondition", () =>
+        {
+            var presets = new SortedDictionary<int, string>();
+            if (Plugin == null)
+                return presets;
+
+            foreach (var index in Plugin.InternalCommand_GetPresetsForContentFinderCondition(contentFinderCondition))
+                presets.Add(index, Plugin.GetLibraryPresetName(index));
+
             return presets;
-
-        foreach (var index in Plugin.InternalCommand_GetPresetsForContentFinderCondition(contentFinderCondition))
-            presets.Add(index, Plugin.GetLibraryPresetName(index));
-
-        return presets;
+        }, new SortedDictionary<int, string>());
     }
 
     private static bool PlacePresetByIndex(int index)
     {
-        Plugin.Log.Information($"IPC request received to place a preset.  Index: {index}");
-        if (Plugin == null)
-            return false;
-        if (DateTimeOffset.UtcNow - TimeOfLastPresetPlacement < IPCPresetPlacementCooldown)
-            return false;
+        return IpcFrameworkGate.Get(Plugin.InternalName + ".PlacePresetByIndex", () =>
+        {
+            Plugin.Log.Information($"IPC request received to place a preset.  Index: {index}");
+            if (Plugin == null)
+                return false;
+            if (DateTimeOffset.UtcNow - TimeOfLastPresetPlacement < IPCPresetPlacementCooldown)
+                return false;
 
-        TimeOfLastPresetPlacement = DateTimeOffset.UtcNow;
-        return Plugin.InternalCommand_PlacePresetByIndex(index);
+            TimeOfLastPresetPlacement = DateTimeOffset.UtcNow;
+            return Plugin.InternalCommand_PlacePresetByIndex(index);
+        }, false);
     }
 
     private static bool PlacePresetByName(string presetName)
     {
-        Plugin.Log.Information($"IPC request received to place a preset.  Preset Name: {presetName}");
-        if (Plugin == null)
-            return false;
-        if (DateTimeOffset.UtcNow - TimeOfLastPresetPlacement < IPCPresetPlacementCooldown)
-            return false;
+        return IpcFrameworkGate.Get(Plugin.InternalName + ".PlacePresetByName", () =>
+        {
+            Plugin.Log.Information($"IPC request received to place a preset.  Preset Name: {presetName}");
+            if (Plugin == null)
+                return false;
+            if (DateTimeOffset.UtcNow - TimeOfLastPresetPlacement < IPCPresetPlacementCooldown)
+                return false;
 
-        TimeOfLastPresetPlacement = DateTimeOffset.UtcNow;
-        return Plugin.InternalCommand_PlacePresetByName(presetName);
+            TimeOfLastPresetPlacement = DateTimeOffset.UtcNow;
+            return Plugin.InternalCommand_PlacePresetByName(presetName);
+        }, false);
     }
 
     private static bool PlacePresetByNameAndTerritoryType(string presetName, uint territoryType)
     {
-        Plugin.Log.Information($"IPC request received to place a preset.  Preset Name: {presetName}, TerritoryType: {territoryType}");
-        if (Plugin == null)
-            return false;
-        if (DateTimeOffset.UtcNow - TimeOfLastPresetPlacement < IPCPresetPlacementCooldown)
-            return false;
+        return IpcFrameworkGate.Get(Plugin.InternalName + ".PlacePresetByNameAndTerritoryType", () =>
+        {
+            Plugin.Log.Information($"IPC request received to place a preset.  Preset Name: {presetName}, TerritoryType: {territoryType}");
+            if (Plugin == null)
+                return false;
+            if (DateTimeOffset.UtcNow - TimeOfLastPresetPlacement < IPCPresetPlacementCooldown)
+                return false;
 
-        TimeOfLastPresetPlacement = DateTimeOffset.UtcNow;
-        return Plugin.InternalCommand_PlacePresetByNameAndTerritoryType(presetName, territoryType);
+            TimeOfLastPresetPlacement = DateTimeOffset.UtcNow;
+            return Plugin.InternalCommand_PlacePresetByNameAndTerritoryType(presetName, territoryType);
+        }, false);
     }
 
     private static bool PlacePresetByNameAndContentFinderCondition(string presetName, ushort contentFinderCondition)
     {
-        Plugin.Log.Information($"IPC request received to place a preset.  Preset Name: {presetName}, ContentFinderCondition: {contentFinderCondition}");
-        if (Plugin == null)
-            return false;
-        if (DateTimeOffset.UtcNow - TimeOfLastPresetPlacement < IPCPresetPlacementCooldown)
-            return false;
+        return IpcFrameworkGate.Get(Plugin.InternalName + ".PlacePresetByNameAndContentFinderCondition", () =>
+        {
+            Plugin.Log.Information($"IPC request received to place a preset.  Preset Name: {presetName}, ContentFinderCondition: {contentFinderCondition}");
+            if (Plugin == null)
+                return false;
+            if (DateTimeOffset.UtcNow - TimeOfLastPresetPlacement < IPCPresetPlacementCooldown)
+                return false;
 
-        TimeOfLastPresetPlacement = DateTimeOffset.UtcNow;
-        return Plugin.InternalCommand_PlacePresetByNameAndContentFinderCondition(presetName, contentFinderCondition);
+            TimeOfLastPresetPlacement = DateTimeOffset.UtcNow;
+            return Plugin.InternalCommand_PlacePresetByNameAndContentFinderCondition(presetName, contentFinderCondition);
+        }, false);
     }
 }

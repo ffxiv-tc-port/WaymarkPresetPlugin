@@ -16,16 +16,23 @@ public static class MemoryHandler
 
     public static unsafe FieldMarkerPreset ReadSlot(uint slotNum)
 	{
-		return FieldMarkerModule.Instance()->Presets[(int)slotNum-1];
+		var module = FieldMarkerModule.Instance();
+		if (module == null)
+			return default;
+
+		return module->Presets[(int)slotNum-1];
 	}
 
 	public static unsafe bool WriteSlot(int slotNum, FieldMarkerPreset preset)
 	{
 		var module = FieldMarkerModule.Instance();
+		if (module == null)
+			return false;
+
 		if (module->Presets.Length < slotNum)
 			return false;
 
-		Plugin.Log.Debug($"Attempting to write slot {slotNum} with data:\r\n{preset}");
+		Plugin.Log.Verbose($"Attempting to write slot {slotNum}: {System.Numerics.BitOperations.PopCount((uint)preset.ActiveMarkers)} markers (mask 0x{preset.ActiveMarkers:X2}), ContentFinderCondition {preset.ContentFinderConditionId}");
 
 		// Zero-based index
 		var pointer = module->Presets.GetPointer(slotNum - 1);
@@ -36,7 +43,7 @@ public static class MemoryHandler
 	private static bool IsSafeToDirectPlacePreset()
 	{
 		var currentContentLinkType = (byte) EventFramework.GetCurrentContentType();
-		return Plugin.ClientState.LocalPlayer != null && !Plugin.Condition[ConditionFlag.InCombat] && currentContentLinkType is > 0 and < 4;
+		return Plugin.Objects.LocalPlayer != null && !Plugin.Condition[ConditionFlag.InCombat] && currentContentLinkType is > 0 and < 4;
 	}
 
 	public static void PlacePreset(FieldMarkerPreset preset)

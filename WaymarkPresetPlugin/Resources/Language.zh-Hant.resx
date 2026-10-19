@@ -1,0 +1,509 @@
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="TextCommandDescription" xml:space="preserve">
+        <value>執行場地標記預設指令。使用「{0}」查看詳細用法說明。</value>
+    </data>
+    <data name="TextCommandResponseHelpSubcommands" xml:space="preserve">
+        <value>有效的指令如下：{0}、{1}、{2}、{3}、{4}、{5}。若未提供指令，將開啟預設庫。輸入「{6} ＜指令＞」查看子指令的詳細說明。</value>
+    </data>
+    <data name="TextCommandResponseHelpConfig" xml:space="preserve">
+        <value>開啟設定視窗。</value>
+    </data>
+    <data name="TextCommandResponseHelpSlotInfo" xml:space="preserve">
+        <value>將遊戲存檔位中保存的資料輸出到聊天視窗。用法：「{0} 存檔位編號」。存檔位編號可以是任何有效的遊戲存檔位。</value>
+    </data>
+    <data name="TextCommandResponseHelpPlace" xml:space="preserve">
+        <value>放置指定名稱的預設（若可行）。名稱必須以引號括住，也可以不加引號改用預設編號指定。用法：「{0} ＜名稱＞|＜編號＞」。名稱須完全相符（大小寫除外）。編號可以是任何有效的預設庫編號。</value>
+    </data>
+    <data name="TextCommandResponseHelpImport" xml:space="preserve">
+        <value>將遊戲的其中一個存檔位複製到預設庫。用法：「{0} 存檔位編號」。存檔位編號可以是任何有效的遊戲存檔位。由於遊戲聊天框的長度限制，不支援以指令列匯入格式化的預設字串。</value>
+    </data>
+    <data name="TextCommandResponseHelpExport" xml:space="preserve">
+        <value>依旗標與參數，將預設庫中的預設複製到指定的遊戲存檔位，*或者*複製到剪貼簿。用法：「{0} [{1}] [{2}] 存檔位|編號 [存檔位]」。存檔位編號可以是任何有效的遊戲存檔位，編號可以是任何有效的預設庫編號。使用 {3} 旗標可指定第一個數字為遊戲存檔位而非預設庫編號。使用 {4} 旗標可在匯出到剪貼簿時包含最後修改時間。</value>
+    </data>
+    <data name="TextCommandResponseHelpExportAll" xml:space="preserve">
+        <value>將預設庫中所有預設複製到剪貼簿，每行一個。若想在匯出內容中包含最後修改時間，請加上 {0}。</value>
+    </data>
+    <data name="TextCommandResponseHelp" xml:space="preserve">
+        <value>使用「{0}」開啟圖形介面。使用「{1}」查看文字指令清單。</value>
+    </data>
+    <data name="TextCommandResponseSlotInfoSuccess1" xml:space="preserve">
+        <value>存檔位 {0} 內容：{1}</value>
+    </data>
+    <data name="TextCommandResponseSlotInfoError1" xml:space="preserve">
+        <value>嘗試讀取遊戲的場地標記資料時發生未知錯誤。</value>
+    </data>
+    <data name="TextCommandResponseSlotInfoError2" xml:space="preserve">
+        <value>無法讀取遊戲的場地標記資料。</value>
+    </data>
+    <data name="TextCommandResponseSlotInfoError3" xml:space="preserve">
+        <value>提供了無效的遊戲存檔位編號。</value>
+    </data>
+    <data name="TextCommandResponsePlaceError1" xml:space="preserve">
+        <value>找不到預設「{0}」。</value>
+    </data>
+    <data name="TextCommandResponsePlaceError2" xml:space="preserve">
+        <value>無效的預設編號「{0}」。</value>
+    </data>
+    <data name="TextCommandResponsePlaceError3" xml:space="preserve">
+        <value>放置預設 {0} 時發生未知錯誤。</value>
+    </data>
+    <data name="TextCommandResponsePlaceError4" xml:space="preserve">
+        <value>無效的預設編號「{0}」。</value>
+    </data>
+    <data name="TextCommandResponsePlaceError5" xml:space="preserve">
+        <value>無法放置預設。這可能代表此插件需要因應新版 FFXIV 進行更新。</value>
+    </data>
+    <data name="TextCommandResponseImportSuccess1" xml:space="preserve">
+        <value>已將遊戲預設 {0} 匯入為預設庫中的預設 {1}。</value>
+    </data>
+    <data name="TextCommandResponseImportError1" xml:space="preserve">
+        <value>嘗試讀取遊戲的場地標記資料時發生未知錯誤。</value>
+    </data>
+    <data name="TextCommandResponseImportError2" xml:space="preserve">
+        <value>無法讀取遊戲的場地標記資料。這可能代表此插件需要因應新版 FFXIV 進行更新。</value>
+    </data>
+    <data name="TextCommandResponseImportError3" xml:space="preserve">
+        <value>提供了無效的遊戲存檔位編號：「{0}」。</value>
+    </data>
+    <data name="TextCommandResponseExportError1" xml:space="preserve">
+        <value>未提供存檔位或編號。</value>
+    </data>
+    <data name="TextCommandResponseExportError2" xml:space="preserve">
+        <value>提供了無效的遊戲存檔位編號（{0}）。</value>
+    </data>
+    <data name="TextCommandResponseExportError3" xml:space="preserve">
+        <value>提供了無效的預設庫編號（{0}）。</value>
+    </data>
+    <data name="TextCommandResponseExportSuccess1" xml:space="preserve">
+        <value>已複製到剪貼簿。</value>
+    </data>
+    <data name="TextCommandResponseExportError4" xml:space="preserve">
+        <value>提供了無效的要匯出遊戲存檔位編號（{0}）。</value>
+    </data>
+    <data name="TextCommandResponseExportError5" xml:space="preserve">
+        <value>提供了無效的預設庫編號（{0}）。</value>
+    </data>
+    <data name="TextCommandResponseExportSuccess2" xml:space="preserve">
+        <value>已將預設匯出到遊戲存檔位 {0}。</value>
+    </data>
+    <data name="TextCommandResponseExportError6" xml:space="preserve">
+        <value>無法寫入遊戲存檔位 {0}！</value>
+    </data>
+    <data name="TextCommandResponseExportError7" xml:space="preserve">
+        <value>提供了無效的目標遊戲存檔位編號（{0}）。</value>
+    </data>
+    <data name="TextCommandResponseExportError8" xml:space="preserve">
+        <value>嘗試匯出預設時發生未知錯誤。</value>
+    </data>
+    <data name="TextCommandResponseExportAllSuccess1" xml:space="preserve">
+        <value>已將場地標記預設庫複製到剪貼簿。</value>
+    </data>
+    <data name="TextCommandResponseExportAllError1" xml:space="preserve">
+        <value>嘗試將預設複製到剪貼簿時發生未知錯誤。</value>
+    </data>
+    <data name="WindowTitleDebugTools" xml:space="preserve">
+        <value>除錯工具</value>
+    </data>
+    <data name="WindowTitlePresetEditor" xml:space="preserve">
+        <value>預設編輯器</value>
+    </data>
+    <data name="EditWindowTextOOBWarningMessage" xml:space="preserve">
+        <value>SE 曾對放置超出範圍場地標記的玩家進行停權處分。手動編輯場地標記座標時請務必謹慎。</value>
+    </data>
+    <data name="EditWindowTextName" xml:space="preserve">
+        <value>名稱： </value>
+    </data>
+    <data name="EditWindowTextActiveColumnHeader" xml:space="preserve">
+        <value>啟用</value>
+    </data>
+    <data name="DragandDropPreviewEditSwapWaymark" xml:space="preserve">
+        <value>將場地標記 {0} 與……交換</value>
+    </data>
+    <data name="EditWindowTextZoneDropdownLabel" xml:space="preserve">
+        <value>區域： </value>
+    </data>
+    <data name="EditWindowTextZoneSearchLabel" xml:space="preserve">
+        <value>搜尋： </value>
+    </data>
+    <data name="ButtonSave" xml:space="preserve">
+        <value>儲存</value>
+    </data>
+    <data name="ButtonCancel" xml:space="preserve">
+        <value>取消</value>
+    </data>
+    <data name="ButtonMapView" xml:space="preserve">
+        <value>地圖檢視</value>
+    </data>
+    <data name="WindowTitleWaymarkHelp" xml:space="preserve">
+        <value>場地標記說明</value>
+    </data>
+    <data name="HelpWindowTextGeneral1" xml:space="preserve">
+        <value>此插件清單中的所有預設，都與遊戲本身的預設完全分開。這讓您可以儲存不限數量的預設，也能輕鬆備份、分享，或匯入他人分享給您的預設。</value>
+    </data>
+    <data name="HelpWindowTextGeneral2" xml:space="preserve">
+        <value>在預設庫中選取一個預設後，旁邊會顯示該預設的資訊視窗，例如場地標記的放置位置，以及可對該預設執行的動作。</value>
+    </data>
+    <data name="HelpWindowTextGeneral3" xml:space="preserve">
+        <value>若想將預設庫中的預設複製到遊戲存檔位，請在清單中選取該預設，然後按下對應目標存檔位編號的按鈕。若想將遊戲清單中的預設匯入預設庫，請向下捲動到「匯入選項」，並按下想從遊戲匯入的存檔位按鈕。您也可以在這裡貼上預設，以從遊戲外部匯入。</value>
+    </data>
+    <data name="HelpWindowTextGeneral4" xml:space="preserve">
+        <value>若想與他人分享預設，可以在預設庫中選取該預設，然後點擊「匯出到剪貼簿」按鈕。</value>
+    </data>
+    <data name="HelpWindowTextGeneral5" xml:space="preserve">
+        <value>此插件也允許您直接在場地中放置與保存場地標記，這正是「放置」與「保存目前場地標記」按鈕的功能。請注意，保存與放置預設僅在遊戲內建系統允許的區域中支援。在這些任務以外的地方保存預設，會導致該預設顯示為未知區域；在這些任務以外的地方嘗試放置預設，則不會有任何效果。</value>
+    </data>
+    <data name="HelpWindowTextGeneral6" xml:space="preserve">
+        <value>可以在預設庫中透過拖放，將預設重新排序到想要的位置。預設庫中任務的預設排序方式，與遊戲檔案中的排序相同，大致等同於這些任務被加入遊戲的順序。如果願意，也可以透過拖放重新排序任務。若您自訂了排序方式，新出現的任務會顯示在清單最下方。</value>
+    </data>
+    <data name="HelpWindowTextEditingWarningMessage" xml:space="preserve">
+        <value>SE 曾對放置超出範圍場地標記的玩家進行停權處分。手動編輯場地標記座標時請務必謹慎。</value>
+    </data>
+    <data name="HelpWindowTextEditing1" xml:space="preserve">
+        <value>點擊預設資訊面板中的「編輯」按鈕，會開啟一個可編輯預設的視窗。您可以調整任何可用的參數，也可以將場地標記拖放到其他場地標記上以交換位置。您還可以將此說明視窗中「圓形計算器」分頁的點位，拖放到編輯視窗中的場地標記上，以計算器算出的座標取代原本的座標。</value>
+    </data>
+    <data name="HelpWindowTextEditing2" xml:space="preserve">
+        <value>在編輯視窗中所做的變更，須點擊「儲存」按鈕後才會套用。</value>
+    </data>
+    <data name="HelpWindowTextMaps1" xml:space="preserve">
+        <value>「地圖檢視」視窗會顯示所選預設所屬任務對應地圖的副本。所有已放置的場地標記都會顯示在地圖上。若某區域有多張子地圖，可以使用視窗右下角的下拉選單切換子地圖。游標在地圖上對應的世界座標會顯示在視窗右下角。若想瞭解遊戲內部座標系統，以及其與遊戲內顯示給玩家的座標之間的關係，請參閱此說明視窗中的「座標」分頁。</value>
+    </data>
+    <data name="HelpWindowTextMaps2" xml:space="preserve">
+        <value>編輯預設時，可以在地圖上拖曳場地標記圖示以調整位置。進行此操作時，座標數值反映的是標記的位置，而非滑鼠的位置。請注意，在地形起伏不平的區域，不建議以此方式編輯場地標記，因為無法自動調整 Y 座標以配合地形。</value>
+    </data>
+    <data name="HelpWindowTextMaps3" xml:space="preserve">
+        <value>另請注意，此插件目前無法判斷哪些場地標記存在於哪張子地圖上，因此所有場地標記都會顯示在各張子地圖對應的位置上（只要在該地圖範圍內）。在少數情況下（例如 e12s），預設子地圖並非您進入區域時所在的子地圖，因此需要手動選擇正確的子地圖。</value>
+    </data>
+    <data name="HelpWindowTextCoordinates1" xml:space="preserve">
+        <value>座標系統：</value>
+    </data>
+    <data name="HelpWindowTextCoordinates2" xml:space="preserve">
+        <value>遊戲內部使用右手 3D 座標系統，X 軸由西向東、Y 軸由下向上、Z 軸由北向南。地圖上的座標系統則是 XZ 平面的 2D 投影，X 軸由西向東、Y 軸由北向南。請注意，聊天連結或遊戲內地圖小工具上顯示的座標，是以任意數值縮放過的，且 Y 軸與 Z 軸互換。此插件使用的是遊戲內部座標系統，如下所示：</value>
+    </data>
+    <data name="HelpWindowTextCircleComputerWarningMessage" xml:space="preserve">
+        <value>SE 曾對放置超出範圍場地標記的玩家進行停權處分。使用此計算器建立或編輯預設時請務必謹慎。</value>
+    </data>
+    <data name="CircleComputerTextInstructions1" xml:space="preserve">
+        <value>此計算器會根據您提供的資訊，計算出放射對稱的點位（「時鐘點」）。接著您可以將這些點位拖放到預設編輯器中，以取代任意場地標記，也可以使用此面板下方的按鈕。</value>
+    </data>
+    <data name="CircleComputerTextCenterPosition" xml:space="preserve">
+        <value>中心位置</value>
+    </data>
+    <data name="CircleComputerTextRadius" xml:space="preserve">
+        <value>半徑 (y)</value>
+    </data>
+    <data name="CircleComputerTextNumberofPoints" xml:space="preserve">
+        <value>點位數量</value>
+    </data>
+    <data name="CircleComputerTextAngleOffset" xml:space="preserve">
+        <value>角度偏移（度）</value>
+    </data>
+    <data name="DragandDropPreviewCircleComputerWaymark" xml:space="preserve">
+        <value>將座標複製到……</value>
+    </data>
+    <data name="ButtonCopyPointsfromCircleComputer" xml:space="preserve">
+        <value>將這些點位複製到編輯器</value>
+    </data>
+    <data name="ButtonCreatePresetfromCircleComputer" xml:space="preserve">
+        <value>使用這些點位建立新預設</value>
+    </data>
+    <data name="DefaultPresetNameCircleComputer" xml:space="preserve">
+        <value>從圓形計算器匯入</value>
+    </data>
+    <data name="HeaderHelpWindowPageGeneral" xml:space="preserve">
+        <value>一般</value>
+    </data>
+    <data name="HeaderHelpWindowPageEditing" xml:space="preserve">
+        <value>編輯</value>
+    </data>
+    <data name="HeaderHelpWindowPageMaps" xml:space="preserve">
+        <value>地圖</value>
+    </data>
+    <data name="HeaderHelpWindowPageCoordinates" xml:space="preserve">
+        <value>座標</value>
+    </data>
+    <data name="HeaderHelpWindowPageCircleCalculator" xml:space="preserve">
+        <value>圓形計算器</value>
+    </data>
+    <data name="WindowTitlePresetInfo" xml:space="preserve">
+        <value>預設資訊</value>
+    </data>
+    <data name="InfoPaneTextCopytoSlotLabel" xml:space="preserve">
+        <value>複製到存檔位：</value>
+    </data>
+    <data name="ButtonPlace" xml:space="preserve">
+        <value>放置</value>
+    </data>
+    <data name="InfoPaneTextPresetInfoLabel" xml:space="preserve">
+        <value>預設資訊：</value>
+    </data>
+    <data name="InfoPaneTextWaymarkColumnHeader" xml:space="preserve">
+        <value>場地標記</value>
+    </data>
+    <data name="InfoPaneTextUnusedWaymark" xml:space="preserve">
+        <value>未使用</value>
+    </data>
+    <data name="InfoPaneTextZoneLabel" xml:space="preserve">
+        <value>區域：{0}</value>
+    </data>
+    <data name="InfoPaneTextLastModifiedLabel" xml:space="preserve">
+        <value>最後修改：{0}</value>
+    </data>
+    <data name="ButtonExporttoClipboard" xml:space="preserve">
+        <value>匯出到剪貼簿</value>
+    </data>
+    <data name="ButtonEdit" xml:space="preserve">
+        <value>編輯</value>
+    </data>
+    <data name="ButtonDelete" xml:space="preserve">
+        <value>刪除</value>
+    </data>
+    <data name="InfoPaneTextConfirmDeleteLabel" xml:space="preserve">
+        <value>確認刪除： </value>
+    </data>
+    <data name="ButtonYes" xml:space="preserve">
+        <value>是</value>
+    </data>
+    <data name="ButtonNo" xml:space="preserve">
+        <value>否</value>
+    </data>
+    <data name="InfoPaneTextNoPresetSelected" xml:space="preserve">
+        <value>未選取預設。</value>
+    </data>
+    <data name="WindowTitleWaymarkLibrary" xml:space="preserve">
+        <value>場地標記預設庫</value>
+    </data>
+    <data name="ConfigOptionFilteronCurrentZone" xml:space="preserve">
+        <value>篩選目前區域</value>
+    </data>
+    <data name="ButtonSaveCurrentWaymarks" xml:space="preserve">
+        <value>保存目前場地標記</value>
+    </data>
+    <data name="LibraryWindowTextZoneSearchLabel" xml:space="preserve">
+        <value>搜尋區域</value>
+    </data>
+    <data name="MainWindowTextNoPresetsFound" xml:space="preserve">
+        <value>沒有符合目前篩選條件的預設。</value>
+    </data>
+    <data name="HeaderPresets" xml:space="preserve">
+        <value>預設</value>
+    </data>
+    <data name="MainWindowTextLibraryEmpty" xml:space="preserve">
+        <value>預設庫是空的！</value>
+    </data>
+    <data name="HeaderImportOptions" xml:space="preserve">
+        <value>匯入選項</value>
+    </data>
+    <data name="HeaderExportandBackupOptions" xml:space="preserve">
+        <value>匯出／備份選項</value>
+    </data>
+    <data name="DragandDropPreviewMovingPreset" xml:space="preserve">
+        <value>正在移動： </value>
+    </data>
+    <data name="DragandDropPreviewMovetoBottom" xml:space="preserve">
+        <value>＜移到最下方＞</value>
+    </data>
+    <data name="DragandDropPreviewMovingZone" xml:space="preserve">
+        <value>正在移動： </value>
+    </data>
+    <data name="DragandDropPreviewMovetoTop" xml:space="preserve">
+        <value>＜移到最上方＞</value>
+    </data>
+    <data name="TextBoxPromptImport" xml:space="preserve">
+        <value>在此貼上預設，然後點擊「匯入」。</value>
+    </data>
+    <data name="ButtonImport" xml:space="preserve">
+        <value>匯入</value>
+    </data>
+    <data name="MainWindowTextImportfromGameSlotLabel" xml:space="preserve">
+        <value>或從遊戲存檔位匯入： </value>
+    </data>
+    <data name="MainWindowTextPresetResourcesLink" xml:space="preserve">
+        <value>到哪裡尋找可匯入的預設</value>
+    </data>
+    <data name="ButtonExportAllPresetstoClipboard" xml:space="preserve">
+        <value>將所有預設匯出到剪貼簿</value>
+    </data>
+    <data name="ButtonBackupCurrentConfig" xml:space="preserve">
+        <value>備份目前設定</value>
+    </data>
+    <data name="HelpBackupCurrentConfig" xml:space="preserve">
+        <value>將目前的設定檔複製到 Dalamud「pluginConfigs」目錄下的備份資料夾。</value>
+    </data>
+    <data name="WindowTitleMapView" xml:space="preserve">
+        <value>地圖檢視</value>
+    </data>
+    <data name="WindowTitleMapViewEditing" xml:space="preserve">
+        <value>地圖檢視－編輯中</value>
+    </data>
+    <data name="MapWindowTextNoMapsAvailable" xml:space="preserve">
+        <value>此區域沒有可用的地圖。</value>
+    </data>
+    <data name="MapWindowTextUnnamedSubmapPlaceholder" xml:space="preserve">
+        <value>未命名子地圖 {0}</value>
+    </data>
+    <data name="MapWindowTextLoadingMaps" xml:space="preserve">
+        <value>正在載入區域地圖。</value>
+    </data>
+    <data name="MapWindowTextUnknownZone" xml:space="preserve">
+        <value>未知區域：沒有可用的地圖。</value>
+    </data>
+    <data name="MapWindowTextNoPresetSelected" xml:space="preserve">
+        <value>未選取預設</value>
+    </data>
+    <data name="WindowTitleConfig" xml:space="preserve">
+        <value>場地標記設定</value>
+    </data>
+    <data name="ConfigOptionAlwaysShowInfoPane" xml:space="preserve">
+        <value>總是顯示預設資訊面板。</value>
+    </data>
+    <data name="ConfigOptionClickingPresetUnselects" xml:space="preserve">
+        <value>點擊已選取的預設會取消選取。</value>
+    </data>
+    <data name="ConfigOptionCategorizePresetsbyZone" xml:space="preserve">
+        <value>依區域分類預設。</value>
+    </data>
+    <data name="ConfigOptionOpenandClosewithGameWindow" xml:space="preserve">
+        <value>隨遊戲的場地標記視窗一同開啟與關閉預設庫。</value>
+    </data>
+    <data name="ConfigOptionAttachtoGameWindow" xml:space="preserve">
+        <value>將預設庫視窗附加到遊戲的場地標記視窗。</value>
+    </data>
+    <data name="ConfigOptionShowIDinZoneNames" xml:space="preserve">
+        <value>在區域名稱旁顯示 ID 編號。</value>
+    </data>
+    <data name="HelpShowIDinZoneNames" xml:space="preserve">
+        <value>在部分位置顯示該區域／任務的內部任務搜尋器 ID。通常僅用於除錯。</value>
+    </data>
+    <data name="ConfigOptionShowPresetIndices" xml:space="preserve">
+        <value>顯示預設在預設庫中的編號。</value>
+    </data>
+    <data name="HelpShowPresetIndices" xml:space="preserve">
+        <value>主要用於需要知道預設編號以用於文字指令的情況。若您只使用圖形介面，可以一直停用此選項。</value>
+    </data>
+    <data name="ConfigOptionAllowPresetDragandDrop" xml:space="preserve">
+        <value>允許以拖放方式重新排序預設。</value>
+    </data>
+    <data name="ConfigOptionAllowZoneDragandDrop" xml:space="preserve">
+        <value>允許以拖放方式重新排序區域。</value>
+    </data>
+    <data name="HelpAllowZoneDragandDrop" xml:space="preserve">
+        <value>啟用後，可以變更依區域排序的預設資料夾順序。新出現的區域會加入清單最下方。若停用了「依區域分類預設」選項，此選項不會有任何效果。</value>
+    </data>
+    <data name="ConfigOptionSortZonesDescending" xml:space="preserve">
+        <value>依區域倒序排列（最新的在最上方）。</value>
+    </data>
+    <data name="HelpSortZonesDescending" xml:space="preserve">
+        <value>勾選後，區域會大致依由新到舊排序（SE 的排序方式並不完美）。搭配「允許以拖放方式重新排序區域」選項使用時，新區域會加入清單最上方（其餘項目維持原本順序排在下方）。</value>
+    </data>
+    <data name="ConfigOptionShowLibraryZoneFilterSearchBox" xml:space="preserve">
+        <value>在預設庫視窗中顯示可篩選區域的搜尋框。</value>
+    </data>
+    <data name="HelpShowLibraryZoneFilterSearchBox" xml:space="preserve">
+        <value>勾選後，預設庫視窗上方會顯示搜尋框，用於篩選想查看的區域。停用「依區域分類預設」選項時，此選項不會有任何效果。</value>
+    </data>
+    <data name="ConfigOptionAutoloadPresetsfromLibarary" xml:space="preserve">
+        <value>自動從預設庫載入預設。</value>
+    </data>
+    <data name="HelpAutoloadpresetsfromLibrary" xml:space="preserve">
+        <value>進入某區域時，自動載入該區域在預設庫中的前五個預設。此操作會在沒有警告的情況下覆蓋遊戲的存檔位，因此請務必先確認已保存所有想保留的資料，再開啟此選項。建議搭配下方的自動匯入選項一併使用，以降低不慎遺失預設的風險。</value>
+    </data>
+    <data name="ConfigOptionAutosavePresetstoLibrary" xml:space="preserve">
+        <value>自動將預設保存到預設庫。</value>
+    </data>
+    <data name="HelpAutosavePresetstoLibrary" xml:space="preserve">
+        <value>離開副本時，自動將任何有內容的遊戲預設存檔位複製到預設庫。</value>
+    </data>
+    <data name="ConfigOptionSuppressTextCommandResponses" xml:space="preserve">
+        <value>抑制文字指令的回應訊息（「{0}」除外）。</value>
+    </data>
+    <data name="ButtonClearAllMapViewData" xml:space="preserve">
+        <value>清除所有地圖檢視資料</value>
+    </data>
+    <data name="HelpClearAllMapViewData" xml:space="preserve">
+        <value>這會刪除所有地圖檢視的平移／縮放／子地圖狀態，將每張地圖重設為預設值。</value>
+    </data>
+    <data name="SettingsWindowTextConfirmDeleteLabel" xml:space="preserve">
+        <value>確認刪除： </value>
+    </data>
+    <data name="ButtonClearAllZoneSortData" xml:space="preserve">
+        <value>清除所有區域排序資料</value>
+    </data>
+    <data name="HelpClearAllZoneSortData" xml:space="preserve">
+        <value>這會刪除預設庫視窗中任何自訂的區域排序，並將排序方式重設為預設值。</value>
+    </data>
+    <data name="ButtonSaveandClose" xml:space="preserve">
+        <value>儲存並關閉</value>
+    </data>
+    <data name="ButtonShowLibrary" xml:space="preserve">
+        <value>顯示預設庫</value>
+    </data>
+    <data name="WaymarkStatusUnused" xml:space="preserve">
+        <value>未使用</value>
+    </data>
+    <data name="PresetInfoErrorZoneName1" xml:space="preserve">
+        <value>取得區域名稱時發生錯誤！</value>
+    </data>
+    <data name="PresetInfoLabelZone" xml:space="preserve">
+        <value>區域： </value>
+    </data>
+    <data name="PresetInfoLabelLastModified" xml:space="preserve">
+        <value>最後修改： </value>
+    </data>
+    <data name="DefaultPresetName" xml:space="preserve">
+        <value>新預設</value>
+    </data>
+    <data name="DefaultPresetNameImported" xml:space="preserve">
+        <value>已匯入</value>
+    </data>
+    <data name="TerminologyZoneSortTypeBasic" xml:space="preserve">
+        <value>依 ID 排序</value>
+    </data>
+    <data name="TerminologyZoneSortTypeAlphabetical" xml:space="preserve">
+        <value>依字母順序排序</value>
+    </data>
+    <data name="TerminologyZoneSortTypeCustom" xml:space="preserve">
+        <value>自訂排序方式</value>
+    </data>
+    <data name="About" xml:space="preserve">
+        <value>關於</value>
+    </data>
+    <data name="Settings" xml:space="preserve">
+        <value>設定</value>
+    </data>
+    <data name="InvalidDataWarning" xml:space="preserve">
+        <value>編輯資料無效，發生了嚴重的錯誤。請按下「取消」並重試。</value>
+    </data>
+    <data name="Author" xml:space="preserve">
+        <value>作者：</value>
+    </data>
+    <data name="Discord" xml:space="preserve">
+        <value>Discord：</value>
+    </data>
+    <data name="Version" xml:space="preserve">
+        <value>版本：</value>
+    </data>
+    <data name="DiscordThread" xml:space="preserve">
+        <value>Discord 討論串</value>
+    </data>
+    <data name="GithubIssues" xml:space="preserve">
+        <value>問題回報</value>
+    </data>
+    <data name="KoFi" xml:space="preserve">
+        <value>Ko-Fi 贊助</value>
+    </data>
+    <data name="Help" xml:space="preserve">
+        <value>說明</value>
+    </data>
+</root>

@@ -1,9 +1,10 @@
 {
   "Author": "Infi, PunishedPineapple",
   "Name": "Waymark Preset Plugin",
-  "Punchline": "Improved Waymark Management",
-  "Description": "Allows you to save, edit, place, import, export, and preview an unlimited number of waymark presets.",
-  "RepoUrl": "https://github.com/Infiziert90/WaymarkPresetPlugin",
+  "Punchline": "更好用的場地標記管理",
+  "Description": "可儲存、編輯、放置、匯入、匯出並預覽數量不限的場地標記預設。",
+  "RepoUrl": "https://github.com/ffxiv-tc-port/WaymarkPresetPlugin",
+  "IconUrl": "https://raw.githubusercontent.com/ffxiv-tc-port/WaymarkPresetPlugin/tc-7.20/docs/Images/icon.png",
   "Tags": [
     "Waymark",
     "Marker",
