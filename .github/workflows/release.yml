@@ -80,3 +80,4 @@ jobs:
 # csproj 在 WaymarkPresetPlugin/ 子資料夾、Platform 為 AnyCPU ⇒ 輸出 WaymarkPresetPlugin/bin/Release/。
 # ci: 觸發 Actions 註冊 dispatch-only workflow(新 repo 首次)
 # ci: 觸發 Actions 註冊 release workflow(新 repo dispatch-only 首次)
+# workflow re-registration trigger 2026-10-26T18:57:03Z
