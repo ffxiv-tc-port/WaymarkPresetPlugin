@@ -4,7 +4,7 @@
   "Punchline": "更好用的場地標記管理",
   "Description": "可儲存、編輯、放置、匯入、匯出並預覽數量不限的場地標記預設。",
   "RepoUrl": "https://github.com/ffxiv-tc-port/WaymarkPresetPlugin",
-  "IconUrl": "https://raw.githubusercontent.com/ffxiv-tc-port/WaymarkPresetPlugin/tc-7.20/docs/Images/icon.png",
+  "IconUrl": "https://raw.githubusercontent.com/ffxiv-tc-port/WaymarkPresetPlugin/tc-7.30/docs/Images/icon.png",
   "Tags": [
     "Waymark",
     "Marker",
